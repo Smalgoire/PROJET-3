@@ -1,0 +1,8 @@
+/* Variables des principales couleurs du site */
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$lightgrey: #F2F2F2;
+$mediumgrey: #e6e6e6;
+$darkgrey: #333333;
+$secondary-primary-gradientcolor : linear-gradient(180deg, $secondary-color, $primary-color); 

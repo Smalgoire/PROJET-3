@@ -1,0 +1,45 @@
+/* Attention! : l'ordre dans lequel les différents fichiers sont importés est important! */
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./base/base";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+#presentation-block {
+    @include column-flexing-center;
+    text-align: center;
+    width: 100%;
+    background-color: $lightgrey;
+    margin: 10px 0px 10px 0px;
+    &__location {
+        @include flexing-center;
+        width: 100%;
+        padding: 12px 0px 12px 0px;
+        margin: 0px 0px 25px 0px;
+        background-color: $mediumgrey;
+        color: $darkgrey;
+        font-size: 85%;
+        font-weight: bold;
+        box-shadow: inset 0px 2px 2px -1px #b3b3b3; /* la 4e valeur permet de "contracter" l'ombre */
+        i {
+            position: relative;
+            right: 15px;
+        }
+    }
+    &__button {
+        @include flexing-center;
+        padding: 12px 15px 12px 15px;
+        margin: 10px 0px 45px 0px;
+        background: $secondary-primary-gradientcolor;
+        @include button-style;
+        color: white;
+        font-size: 85%;
+        font-weight: bold;
+    }
+    > p { /* on sélectionne seulement les enfants du parent avec le combinateur ">" */
+        margin-bottom: 15px;
+    }
+}
+

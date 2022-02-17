@@ -1,0 +1,68 @@
+/* le directory base/ contient les fichiers qui définissent les fondations de votre site,
+ par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site, telles que le box-sizing ; */
+
+*, *::before, *::after {
+    /* box-sizing est appliqué à tous les éléments */
+    /* :before & :after sont utilisés pour appliquer les propriétés CSS juste avant/après le contenu à l'intérieur de l'élément correspondant. */
+     box-sizing: border-box;
+    /* Utilisation d'un moyen alternatif pour gérer les box ==> box-sizing */
+    /* Border-box : les largeur et hauteur spécifiées sont celles de l'élément dans son ensemble,
+       en conséquence les dimensions du padding ou des bordures viennent diminuer les dimensions du contenu. */
+   }
+
+body { /* Enlève la petite marge présente de base dans les navigateurs */
+    margin: 0;
+}
+
+#container {
+    width: 100%;
+    min-width: 320px;
+}
+
+ body h1,h2,h3,h4,h5,h6 { 
+    margin: 0;  
+}
+
+p {
+    margin: 0;
+}
+
+@font-face { /* Gestion police du texte */
+    font-family: 'Shrikhand';
+    src: url('../images/polices/Shrikhand-Regular.ttf') format('truetype');
+}
+  
+@font-face { /* Gestion police du texte */
+    font-family: 'Roboto';
+    src: url('../images/polices/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face { /* Gestion police du texte */
+    font-family: 'Roboto-Bold';
+    src: url('../images/polices/Roboto-bold.tff') format('truetype');
+}
+    
+body {
+      font-family: 'Roboto', sans-serif;   
+}
+    
+body h1,h2,h3,h4,h5,h6 { 
+      font-family: 'Shrikhand', sans-serif;   
+}
+
+.bigdarkbold-text {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.mediumdarkbold-text {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.grey-text {
+    color: mix($mediumgrey, $darkgrey, 30%);
+    font-size: 95%;
+}
