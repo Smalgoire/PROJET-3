@@ -1,19 +1,30 @@
 /* Pour éviter de réecrire sans cesse les mêmes règles flex */
 @mixin flexing-center {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Pour éviter de réecrire sans cesse les mêmes règles flex */
 @mixin column-flexing-center {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin column-flexing-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 @mixin button-style {
-box-shadow: 3px 3px 10px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
-border-radius: 45px;
+    box-shadow: 3px 3px 10px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
+    border-radius: 45px;
+}
+
+@mixin standard-shadow {
+    box-shadow: 3px 3px 10px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
 }

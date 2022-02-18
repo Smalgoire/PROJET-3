@@ -43,3 +43,48 @@
     }
 }
 
+#functioning-block {
+    @include column-flexing-center;
+    width: 100%;
+    &__title {
+        width: 315px;
+        text-align: left;
+        margin: 20px 0px 10px 0px;
+        position: relative;
+        right: 7px;
+    }
+    .functioning-block__options {
+        @include flexing-center;
+        width: 315px;
+        height: 53px;
+        margin: 10px 5px 10px 5px;
+        @include standard-shadow;
+        border-radius: 13px;
+        background-color: $lightgrey;
+        position: relative; /* permet de placer les enfants en absolute par rapport au parent */
+        span {
+            @include flexing-center;
+            position: absolute;
+            left: -10px;
+            color: white;
+            font-size: 75%;
+            background-color: $primary-color;
+            height: 18px;
+            width: 18px;
+            border-radius: 100%;
+        }
+        i {
+            position: absolute;
+            left: 40px;
+            font-size: 15px;
+            color: mix($mediumgrey, $darkgrey, 30%);
+        }
+        .fa-store {
+            color: $primary-color;
+        }
+        p {
+            position: absolute;
+            left: 80px;
+        }
+    }
+}
