@@ -5,6 +5,18 @@
     align-items: center;
 }
 
+@mixin flexing-spacebetween {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+@mixin column-flexing-spacearound {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
 /* Pour éviter de réecrire sans cesse les mêmes règles flex */
 @mixin column-flexing-center {
     display: flex;

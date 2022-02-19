@@ -53,22 +53,33 @@ body h1,h2,h3,h4,h5,h6 {
 .bigdarkbold-text {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 .mediumdarkbold-text {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: bold;
-    font-size: 90%;
+    font-size: 100%;
 }
 
 .smalldarkbold-text {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 80%;
+    font-size: 84%;
+}
+
+.smalldark-text {
+    font-size: 98%;
+    color: mix(black, $mediumgrey, 75%);
 }
 
 .grey-text {
     color: mix($mediumgrey, $darkgrey, 30%);
     font-size: 95%;
 }
+
+a.restaurants-block__cards__imgcontainer { /* Rendre toute la div clickable */
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }

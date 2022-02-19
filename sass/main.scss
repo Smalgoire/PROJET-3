@@ -56,7 +56,7 @@
     .functioning-block__options {
         @include flexing-center;
         width: 315px;
-        height: 53px;
+        height: 60px;
         margin: 10px 5px 10px 5px;
         @include standard-shadow;
         border-radius: 13px;
@@ -85,6 +85,82 @@
         p {
             position: absolute;
             left: 80px;
+        }
+        &--primaryglow {
+            background-color: mix($secondary-primary-mixcolor, $lightgrey, 10%); 
+        }
+    }
+}
+
+#restaurants-block {
+    @include column-flexing-center;
+    width: 100%;
+    background-color: $lightgrey;
+    margin: 40px 0px 0px 0px;
+    padding: 40px 10px 40px 10px;
+    &__title {
+        width: 100%;
+        text-align: left;
+        margin: 0px 0px 10px 0px;
+        
+    }
+    .restaurants-block__cards {
+        @include column-flexing-center;
+        width: 100%;
+        height: 250px;
+        margin: 10px 0px 10px 0px;
+        @include standard-shadow;
+        border-radius: 15px;
+        &__imgcontainer {
+            display: flex;
+            width: 100%;
+            height: 70%;
+            position: relative;
+            img {
+                width: 100%;
+            object-fit: cover; 
+            /* (object-fit: cover) ==> Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu.
+            La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément.
+            Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            }
+            &--new-button {
+                @include flexing-center;
+                height: 30px;
+                width: 90px;
+                background-color: $tertiary-color;
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                color: darken($tertiary-color, 40%);
+                border-radius: 2px;
+                
+            }
+            :hover {
+                opacity: 90%;
+            }
+        }
+        &__infoscontainer {
+            @include flexing-spacebetween;
+            width: 100%;
+            height: 30%;
+            &__textcontainer {
+                @include column-flexing-spacearound;
+                height: 65%;
+                margin-left: 10px;
+            }
+            &__iconcontainer {
+                @include flexing-center;
+                width: 19%;
+                position: relative;
+                bottom: 5px;
+                i {
+                    color: $primary-color;
+                    font-size: 25px;
+                    
+                }
+            }
         }
     }
 }
