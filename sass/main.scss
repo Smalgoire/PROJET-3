@@ -56,7 +56,7 @@
     .functioning-block__options {
         @include flexing-center;
         width: 315px;
-        height: 53px;
+        height: 60px;
         margin: 10px 5px 10px 5px;
         @include standard-shadow;
         border-radius: 13px;
@@ -86,5 +86,169 @@
             position: absolute;
             left: 80px;
         }
+        &--primaryglow {
+            background-color: mix($secondary-primary-mixcolor, $lightgrey, 10%); 
+        }
+    }
+}
+
+#restaurants-block {
+    @include column-flexing-center;
+    width: 100%;
+    background-color: $lightgrey;
+    margin: 40px 0px 0px 0px;
+    padding: 40px 10px 40px 10px;
+    &__title {
+        width: 100%;
+        text-align: left;
+        margin: 0px 0px 10px 0px;
+        
+    }
+    .restaurants-block__cards {
+        @include column-flexing-center;
+        width: 100%;
+        height: 250px;
+        margin: 10px 0px 10px 0px;
+        @include standard-shadow;
+        border-radius: 15px;
+        background-color: lighten($lightgrey, 2%);
+        &__imgcontainer {
+            display: flex;
+            width: 100%;
+            height: 70%;
+            position: relative;
+            img {
+                width: 100%;
+            object-fit: cover; 
+            /* (object-fit: cover) ==> Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu.
+            La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément.
+            Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            }
+            &--new-button {
+                @include flexing-center;
+                height: 30px;
+                width: 90px;
+                background-color: $tertiary-color;
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                color: darken($tertiary-color, 40%);
+                border-radius: 2px;
+                
+            }
+            :hover {
+                opacity: 90%;
+            }
+        }
+        &__infoscontainer {
+            @include flexing-spacebetween;
+            width: 100%;
+            height: 30%;
+            &__textcontainer {
+                @include column-flexing-spacearound;
+                height: 65%;
+                margin-left: 10px;
+            }
+            &__iconcontainer {
+                @include flexing-center;
+                width: 19%;
+                position: relative;
+                bottom: 5px;
+                i {
+                    @include hearticon-resized;  
+                }
+            }
+        }
+    }
+}
+
+/* Partie menus des différents restaurants */
+
+#menu-title {
+    @include column-flexing-center;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 350px;
+    }
+    &__text {
+        width: 100%;
+        height: 27%;
+        background-color: $lightgrey;
+        @include flexing-spacebetween;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding: 0px 40px 0px 15px;
+        position: absolute;
+        bottom: 0px;
+        i {
+            @include hearticon-resized;
+            font-size: 18px;
+        }
+    }
+}
+
+.menu-parts {
+    @include column-flexing-center;
+    width: 100%;
+    padding: 0px 10px 20px 10px;
+    background-color: $lightgrey;
+    &__title {
+        position: relative;
+        width: 100%;
+        height: 35px;
+        padding-left: 5px;
+        
+    }
+    &__title::before { /* Utilisation pseudo-élément pour pouvoir manipuler la bordure comme je veux */
+        content : "";
+        position: absolute;
+        left    : 5px;
+        bottom  : 10px;
+        height  : 2px;
+        width   : 40px; 
+        border-bottom: 3px solid darken($tertiary-color, 10%);
+      }
+    &__dishes {
+        @include column-flexing-left;
+        width: 100%;
+        height: 65px;
+        border-radius: 15px;
+        margin: 2px 0px 12px 0px;
+        padding: 15px 18px 15px 12px;
+        @include standard-shadow;
+        background-color: lighten($lightgrey, 1%);
+        > p { /* selectionne juste l'enfant et non les descendants */
+            font-size: 110%;
+        }
+        &__flexline {
+            width: 100%;
+            @include flexing-spacebetween;
+            margin-top: 5px;
+            font-size: 95%;
+        }
+    }
+}
+
+#command-button {
+    @include flexing-center;
+    width: 100%;
+    background-color: $lightgrey;
+    padding: 10px 0px 10px 0px;
+    &__button {
+    @include flexing-center;
+    width: 190px;
+    height: 50px;
+    padding: 12px 15px 12px 15px;
+    margin: 10px 0px 45px 0px;
+    background: $secondary-primary-gradientcolor;
+    @include button-style;
+    color: white;
+    font-weight: bold;
     }
 }

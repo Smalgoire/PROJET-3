@@ -1,2 +1,32 @@
 /* layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable,
  par exemple un header pour les mises en page de grande taille ou un footer ; */
+ #footer-block {
+     background-color: $darkgrey;
+     padding: 25px 0px 25px 25px;
+     width: 100%;
+     h1 {
+         color: white;
+         font-size: 110%;
+         margin-bottom: 15px;
+         font-weight: lighter;
+     }
+     ul {
+        margin: 0;
+        padding: 0;
+     }
+     ul li {
+         list-style-type: none; /* Pour enlever les puces des li */
+         color: white;
+         font-size: 95%;
+         margin-bottom: 6px;
+        .fa-utensils {
+            font-size: 80%;
+            margin-right: 11px;
+        }
+        .fa-handshake-angle {
+            font-size: 70%;
+            margin-right: 8px;
+        }
+         
+     }
+ }

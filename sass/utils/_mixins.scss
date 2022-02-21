@@ -5,6 +5,18 @@
     align-items: center;
 }
 
+@mixin flexing-spacebetween {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+@mixin column-flexing-spacearound {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
 /* Pour éviter de réecrire sans cesse les mêmes règles flex */
 @mixin column-flexing-center {
     display: flex;
@@ -27,4 +39,11 @@
 
 @mixin standard-shadow {
     box-shadow: 3px 3px 10px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
+}
+
+@mixin hearticon-resized
+{
+    color: $darkgrey;
+    font-size: 22px;
+    transform: scale(1.1,1.3); /* retouche de l'icone pour quelle soit légerement plus etiré en hauteur */
 }
