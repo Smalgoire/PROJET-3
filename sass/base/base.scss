@@ -78,8 +78,16 @@ body h1,h2,h3,h4,h5,h6 {
     font-size: 95%;
 }
 
+.justbold {
+    font-weight: bold;
+}
+
 a.restaurants-block__cards__imgcontainer { /* Rendre toute la div clickable */
     height: 100%;
     width: 100%;
     text-decoration: none;
   }
+
+a {
+    text-decoration: none; /* remove a href underline */
+}
