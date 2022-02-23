@@ -150,8 +150,13 @@
     margin: 40px 0px 0px 0px;
     padding: 40px 10px 40px 10px;
     @media all and (min-width: $desktop-minbreakpoint) {
-        padding-left: 35px;
-        padding-right: 35px;
+        flex-direction: row;
+        position: relative;
+        &__title { /* Pour exclure mon élément de la gestion flex en responsive desktop et me simplifier la vie */
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
     }
     &__title {
         width: 100%;
@@ -164,16 +169,7 @@
             font-size: 155%;
         } 
     }
-    &__flexblock1 {
-        @media all and (min-width: $desktop-minbreakpoint) {
-            display: flex;
-        }
-    }
-    &__flexblock2 {
-        @media all and (min-width: $desktop-minbreakpoint) {
-            display: flex;
-        }
-    }
+    
     .restaurants-block__cards {
         @include column-flexing-center;
         width: 100%;
@@ -187,7 +183,7 @@
         }
         @media all and (min-width: $desktop-minbreakpoint) {
             margin: 10px;
-            height: 500px;
+            height: 475px;
         }
         &__imgcontainer {
             display: flex;
