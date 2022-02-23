@@ -8,13 +8,27 @@
      margin: 10px 0px 0px 0px;
      padding: 2px 0px 2px 0px;
      position: relative;
+     @media all and (min-width: $tablet-minbreakpoint) {
+        margin: 30px 0px 30px 0px;
+    }
      img {
          width: 40%;
          height: auto;
+        @media all and (min-width: $tablet-minbreakpoint) {
+            width: 35%;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            width: 20%;
+        }
      }
      a {
          position: absolute;
-         left: 15px;
+         left: 30px;
+         font-size: 23px;
          color: $darkgrey;
+         @media all and (min-width: $desktop-minbreakpoint) {
+            font-size: 45px;
+            left: 60px;
+        }
      }
  }

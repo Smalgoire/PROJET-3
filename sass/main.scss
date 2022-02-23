@@ -13,6 +13,13 @@
     width: 100%;
     background-color: $lightgrey;
     margin: 10px 0px 10px 0px;
+    @media all and (min-width: $tablet-minbreakpoint) {
+        font-size: 120%;
+    }
+    @media all and (min-width: $desktop-minbreakpoint) {
+        margin: 0px 10px 0px 25px;
+        font-size: 125%;
+    }
     &__location {
         @include flexing-center;
         width: 100%;
@@ -26,6 +33,14 @@
         i {
             position: relative;
             right: 15px;
+        }
+        @media all and (min-width: $tablet-minbreakpoint) {
+            height: 55px;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            height: 65px;
+            font-size: 115%;
+            margin-bottom: 29px;
         }
     }
     &__button {
@@ -43,15 +58,43 @@
     }
 }
 
+@media all and (min-width: $desktop-minbreakpoint) {
+    #presplusfunction-flexblock {
+        display: flex;
+        flex-direction: row;    
+    }
+}
+
+
 #functioning-block {
     @include column-flexing-center;
     width: 100%;
+    @media all and (min-width: $desktop-minbreakpoint) {
+        background-color: $lightgrey;
+        margin: 0px 25px 0px 10px;
+    }
     &__title {
         width: 315px;
         text-align: left;
         margin: 20px 0px 10px 0px;
         position: relative;
         right: 7px;
+        @media all and (min-width: $tablet-minbreakpoint) {
+            font-size: 140%;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            @include flexing-center;
+            margin: 0px 0px 10px 0px;
+            right: inherit;
+            width: 100%;
+            height: 65px;
+            padding: 12px 0px 12px 0px;
+            background-color: $mediumgrey;
+            color: $darkgrey;
+            font-size: 145%;
+            font-weight: bold;
+            box-shadow: inset 0px 2px 2px -1px #b3b3b3;
+        }
     }
     .functioning-block__options {
         @include flexing-center;
@@ -61,7 +104,15 @@
         @include standard-shadow;
         border-radius: 13px;
         background-color: $lightgrey;
+        font-size: 90%;
         position: relative; /* permet de placer les enfants en absolute par rapport au parent */
+        @media all and (min-width: $tablet-minbreakpoint) {
+            font-size: 95%;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            font-size: 100%;
+            height: 65px;
+        }
         span {
             @include flexing-center;
             position: absolute;
@@ -98,11 +149,30 @@
     background-color: $lightgrey;
     margin: 40px 0px 0px 0px;
     padding: 40px 10px 40px 10px;
+    @media all and (min-width: $desktop-minbreakpoint) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
     &__title {
         width: 100%;
         text-align: left;
-        margin: 0px 0px 10px 0px;
-        
+        margin: 0px 0px 10px 0px;  
+        @media all and (min-width: $tablet-minbreakpoint) {
+            font-size: 140%;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            font-size: 155%;
+        } 
+    }
+    &__flexblock1 {
+        @media all and (min-width: $desktop-minbreakpoint) {
+            display: flex;
+        }
+    }
+    &__flexblock2 {
+        @media all and (min-width: $desktop-minbreakpoint) {
+            display: flex;
+        }
     }
     .restaurants-block__cards {
         @include column-flexing-center;
@@ -112,6 +182,13 @@
         @include standard-shadow;
         border-radius: 15px;
         background-color: lighten($lightgrey, 2%);
+        @media all and (min-width: $tablet-minbreakpoint) {
+            height: 450px;
+        }
+        @media all and (min-width: $desktop-minbreakpoint) {
+            margin: 10px;
+            height: 500px;
+        }
         &__imgcontainer {
             display: flex;
             width: 100%;
@@ -146,6 +223,12 @@
             @include flexing-spacebetween;
             width: 100%;
             height: 30%;
+            @media all and (min-width: $tablet-minbreakpoint) {
+                font-size: 125%;
+            }
+            @media all and (min-width: $desktop-minbreakpoint) {
+                font-size: 135%;
+            }
             &__textcontainer {
                 @include column-flexing-spacearound;
                 height: 65%;
@@ -158,6 +241,12 @@
                 bottom: 5px;
                 i {
                     @include hearticon-resized;  
+                    @media all and (min-width: $tablet-minbreakpoint) {
+                        font-size: 30px;
+                    }
+                    @media all and (min-width: $desktop-minbreakpoint) {
+                        font-size: 33px;
+                    }
                 }
             }
         }
@@ -171,6 +260,9 @@
     width: 100%;
     margin-top: 10px;
     position: relative;
+    @media all and (min-width: $desktop-minbreakpoint) {
+        font-size: 125%;
+    }
     img {
         object-fit: cover;
         width: 100%;
@@ -189,6 +281,9 @@
         i {
             @include hearticon-resized;
             font-size: 18px;
+            @media all and (min-width: $desktop-minbreakpoint) {
+                font-size: 30px;
+            }
         }
     }
 }
@@ -198,6 +293,9 @@
     width: 100%;
     padding: 0px 10px 20px 10px;
     background-color: $lightgrey;
+    @media all and (min-width: $desktop-minbreakpoint) {
+            font-size: 115%;
+        }
     &__title {
         position: relative;
         width: 100%;
@@ -223,6 +321,9 @@
         padding: 15px 18px 15px 12px;
         @include standard-shadow;
         background-color: lighten($lightgrey, 1%);
+        @media all and (min-width: $desktop-minbreakpoint) {
+            height: 75px;
+        }
         > p { /* selectionne juste l'enfant et non les descendants */
             font-size: 110%;
         }
@@ -250,5 +351,10 @@
     @include button-style;
     color: white;
     font-weight: bold;
+    @media all and (min-width: $desktop-minbreakpoint) {
+        font-size: 115%;
+        height: 60px;
+        width: 210px;
+    }
     }
 }

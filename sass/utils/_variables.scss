@@ -7,3 +7,7 @@ $mediumgrey: #e6e6e6;
 $darkgrey: #333333;
 $secondary-primary-gradientcolor : linear-gradient(180deg, $secondary-color, $primary-color); 
 $secondary-primary-mixcolor : mix($secondary-color, $primary-color, 30%);
+
+/* Responsive Breakpoints */
+$tablet-minbreakpoint: 768px;
+$desktop-minbreakpoint: 992px;

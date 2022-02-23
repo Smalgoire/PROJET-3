@@ -91,3 +91,12 @@ a.restaurants-block__cards__imgcontainer { /* Rendre toute la div clickable */
 a {
     text-decoration: none; /* remove a href underline */
 }
+
+@media all and (min-width: $desktop-minbreakpoint) {
+#flexmenus {
+    @include column-flexing-center;
+}
+#desktop-width {
+    width: 50%;
+}
+}

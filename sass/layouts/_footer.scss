@@ -4,15 +4,26 @@
      background-color: $darkgrey;
      padding: 25px 0px 25px 25px;
      width: 100%;
+     @media all and (min-width: $tablet-minbreakpoint) {
+        font-size: 145%;
+        @include column-flexing-center;
+        padding: 45px 0px 45px 0px;
+    }
      h1 {
          color: white;
          font-size: 110%;
          margin-bottom: 15px;
          font-weight: lighter;
+         @media all and (min-width: $desktop-minbreakpoint) {
+            font-size: 130%;
+        }
      }
      ul {
         margin: 0;
         padding: 0;
+        @media all and (min-width: $tablet-minbreakpoint) {
+            @include column-flexing-center;
+        }
      }
      ul li {
          list-style-type: none; /* Pour enlever les puces des li */
