@@ -30,6 +30,9 @@
         font-size: 85%;
         font-weight: bold;
         box-shadow: inset 0px 2px 2px -1px #b3b3b3; /* la 4e valeur permet de "contracter" l'ombre */
+        h2 {
+            font-size: 100%;
+        }
         i {
             position: relative;
             right: 15px;
