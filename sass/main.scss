@@ -56,6 +56,10 @@
         font-size: 85%;
         font-weight: bold;
     }
+    &__button:hover {
+        background: darken($secondary-color, 2%);
+        box-shadow: 2px 6px 2px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
+    }
     > p { /* on sélectionne seulement les enfants du parent avec le combinateur ">" */
         margin-bottom: 15px;
     }
@@ -235,18 +239,57 @@
             }
             &__iconcontainer {
                 @include flexing-center;
-                width: 19%;
+                width: 25%;
+                height: 100%;
                 position: relative;
-                bottom: 5px;
                 i {
-                    @include hearticon-resized;  
+                    @include hearticon-resized;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
                     @media all and (min-width: $tablet-minbreakpoint) {
                         font-size: 30px;
+                        top: 45px;
+                        right: 55px;
                     }
                     @media all and (min-width: $desktop-minbreakpoint) {
                         font-size: 33px;
+                        top: 50px;
+                        right: 27px;
                     }
                 }
+                /* Animation de l'icône "j'aime" qui se remplit au survol pour cette version prototype */
+                /* J'ai utilisé une icône heart vide et une pleine que je superpose en absolute, et on joue avec
+                opacity pour réaliser l'effet
+                .fa-solid.fa-heart {
+                    opacity: 0;
+                    transition: opacity 1s;
+                    &:hover {
+                        opacity: 1;
+                        color: $secondary-primary-mixcolor;  
+                    }
+                } */
+                /* Autre option d'animation "keyframes" qui me permet de gérer les états avant, pendant et après l'animation*/
+                @keyframes heart-filling{
+                    0% {
+                        opacity: 0;
+                        color: $secondary-primary-mixcolor;
+                    }
+                    100% {
+                        opacity: 1;
+                        color: $secondary-primary-mixcolor;
+                    }
+                }
+                .fa-solid.fa-heart {
+                    opacity: 0;
+                    &:hover {
+                        opacity: 1;
+                        animation-name: heart-filling;
+                        animation-duration: 1s; 
+                        animation-fill-mode: forwards; /* pour éviter que l'icône reprenne la couleur d'origine */
+                    }
+                }
+
             }
         }
     }
@@ -280,10 +323,40 @@
         i {
             @include hearticon-resized;
             font-size: 18px;
+            position: absolute;
+            top: 38px;
+            right: 40px;
+            @media all and (min-width: $tablet-minbreakpoint) {
+                font-size: 20px;
+                top: 40px;
+                right: 45px;
+            }
             @media all and (min-width: $desktop-minbreakpoint) {
                 font-size: 30px;
+                top: 33px;
+                right: 40px;
             }
         }
+        /* Animation de l'icône "j'aime" qui se remplit au survol pour cette version prototype */
+                /* J'ai utilisé une icône heart vide et une pleine que je superpose en absolute, et on joue avec
+                opacity pour réaliser l'effet 
+                .fa-solid.fa-heart {
+                    opacity: 0;
+                    transition: opacity 1s;
+                    &:hover {
+                        opacity: 1;
+                        color: $secondary-primary-mixcolor;  
+                    }
+                }*/
+                .fa-solid.fa-heart {
+                    opacity: 0;
+                    &:hover {
+                        opacity: 1;
+                        animation-name: heart-filling;
+                        animation-duration: 1s; 
+                        animation-fill-mode: forwards; /* pour éviter que l'icône reprenne la couleur d'origine */
+                    }
+                }
     }
 }
 
@@ -355,5 +428,9 @@
         height: 60px;
         width: 210px;
     }
+    }
+    &__button:hover {
+        background: darken($secondary-color, 2%);
+        box-shadow: 2px 6px 2px #bfbfbf; /* offset-x | offset-y | blur-radius | color */
     }
 }
