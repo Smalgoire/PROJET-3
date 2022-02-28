@@ -46,8 +46,16 @@ body {
       font-family: 'Roboto', sans-serif;   
 }
     
-body h1,h2,h3,h4,h5,h6 { 
-      font-family: 'Shrikhand', sans-serif;   
+h1 {
+    font-family: 'Shrikhand', sans-serif;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+.just-shrikhand {
+    font-family: 'Shrikhand', sans-serif;
 }
 
 .bigdarkbold-text {
@@ -60,6 +68,11 @@ body h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: bold;
     font-size: 100%;
+    &--bigger {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 110%;
+    }
 }
 
 .smalldarkbold-text {
@@ -71,6 +84,10 @@ body h1,h2,h3,h4,h5,h6 {
 .smalldark-text {
     font-size: 98%;
     color: mix(black, $mediumgrey, 75%);
+    &--smaller {
+        font-size: 95%;
+        color: mix(black, $mediumgrey, 75%);
+    }
 }
 
 .grey-text {
@@ -100,3 +117,4 @@ a {
     width: 50%;
 }
 }
+
