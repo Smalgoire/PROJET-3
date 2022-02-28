@@ -375,27 +375,58 @@
         border-bottom: 3px solid darken($tertiary-color, 10%);
       }
     &__dishes {
-        @include column-flexing-left;
+        @include flexing-spacebetween;
+        flex-basis: auto;
         width: 100%;
         height: 65px;
         border-radius: 15px;
         margin: 2px 0px 12px 0px;
-        padding: 15px 18px 15px 12px;
         @include standard-shadow;
         background-color: lighten($lightgrey, 1%);
         @media all and (min-width: $desktop-minbreakpoint) {
             height: 75px;
         }
-        > p { /* selectionne juste l'enfant et non les descendants */
-            font-size: 110%;
-        }
         &__flexline {
             width: 100%;
-            @include flexing-spacebetween;
-            margin-top: 5px;
-            font-size: 95%;
+            height: 100%;
+            @include column-flexing-left;
+            margin: 15px 15px 15px 12px;
+            p {
+                margin: 3px 0px 3px 0px;
+            }
+        }
+        &__price {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 11px;
+            margin-right: 15px;
+        }
+        &__checked {
+            @include flexing-center;
+            background-color: $tertiary-color;
+            width: 5px; 
+            height: 100%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            opacity: 0;
+            i {
+                color: white;
+                font-size: 25px;
+                transform: rotate(0deg);
+            }
         }
     }
+    /* Animation check on hover sur les plats */ 
+    &__dishes {
+        &:hover &__checked {
+            @include checked-animation-parameters;
+        }
+        &:hover &__checked i{
+            transform: rotate(360deg);
+            transition: transform 1000ms;
+        }
+    } 
     /* Animation de l'affichage Entrée/Plats/Desserts avec un petit délai */
     &__dishes__animation1 {
         @include dishes-animation-parameters;
@@ -436,7 +467,7 @@
     &__dishes__animation10 {
         @include dishes-animation-parameters;
         animation-delay: 3250ms;
-    }      
+    }
 }
 #command-button {
     @include flexing-center;

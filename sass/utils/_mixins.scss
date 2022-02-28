@@ -11,6 +11,13 @@
     align-items: center;
 }
 
+@mixin column-flexing-spacebetween {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
 @mixin column-flexing-spacearound {
     display: flex;
     flex-direction: column;
@@ -28,6 +35,12 @@
 @mixin column-flexing-left {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flexing-left {
+    display: flex;
     justify-content: center;
     align-items: flex-start;
 }
@@ -52,5 +65,11 @@
     animation-name: dishes-animation;
     animation-duration: 1000ms;
     animation-fill-mode: backwards; /* pour que la div reste invisible avant le lancement de l'animation */
+}
+
+@mixin checked-animation-parameters {
+    animation-name: checked-animation;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards; /* pour que la div reste visible après l'animation */
 }
 

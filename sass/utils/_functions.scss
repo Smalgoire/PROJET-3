@@ -19,3 +19,16 @@
         opacity: 1;
     }
 }
+
+/* Animation check div on hover sur les dishes*/
+@keyframes checked-animation{
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+        width: 125px; /* Pas une bonne solution (DOM) d'après le cours, mais que ça qui marche pour le moment */
+    }
+}
+
+/* J'utilise les keyframes surtout pour profiter de la propriété animation fill mode pour l'instant */
