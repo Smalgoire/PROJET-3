@@ -7,6 +7,74 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 
+/* Loading spinner pour la page principale */
+/* Idée coherence avec le site, le loader ressemble a des assiettes empilées
+et utilise les couleurs principales du site */
+.loader { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include loader-positioning;
+    width: 350px;
+    height: 350px;
+    border: 15px solid $mediumgrey;
+    @media all and (max-width: $tablet-minbreakpoint) {
+        width: 150px;
+        height: 150px;;
+        border: 10px solid $mediumgrey;
+        border-top-color: $primary-color;
+        border-bottom-color: $primary-color;
+    }
+    border-top-color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-radius: 50%;
+    @include loader-animation-parameters;  
+}
+
+.loader::before {
+    @include loader-positioning;
+    content: "";
+    width: 150px;
+    height: 150px;
+    @media all and (max-width: $tablet-minbreakpoint) {
+        width: 100px;
+        height: 100px;
+        border: 10px solid $mediumgrey;
+        border-top-color: $tertiary-color;
+        border-bottom-color: $tertiary-color;
+    }
+    border: 15px solid $mediumgrey;
+    border-top-color: $tertiary-color;
+    border-bottom-color: $tertiary-color;
+    border-radius: 50%;
+    @include loader-animation-parameters;
+}
+
+.loader::after {
+    @include loader-positioning;
+    content: "";
+    width: 250px;
+    height: 250px;
+    @media all and (max-width: $tablet-minbreakpoint) {
+        width: 50px;
+        height: 50px;
+        border: 10px solid $mediumgrey;
+        border-top-color: $secondary-color;
+        border-bottom-color: $secondary-color;
+    }
+    border: 15px solid $mediumgrey;
+    border-top-color: $secondary-color;
+    border-bottom-color: $secondary-color;
+    border-radius: 50%;
+    @include loader-animation-parameters;
+}
+
+.container-hide {
+    animation-name: hide-mainpage;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
 #presentation-block {
     @include column-flexing-center;
     text-align: center;
@@ -391,6 +459,10 @@
             height: 100%;
             @include column-flexing-left;
             margin: 15px 15px 15px 12px;
+            /*Pour que le texte soit recouvert lors de l'animation checked */
+            text-overflow: ellipsis;
+            overflow:hidden;
+            white-space: nowrap;
             p {
                 margin: 3px 0px 3px 0px;
             }

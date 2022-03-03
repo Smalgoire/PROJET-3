@@ -73,3 +73,19 @@
     animation-fill-mode: forwards; /* pour que la div reste visible après l'animation */
 }
 
+/* positionnement du spinner au centre de la page en toute cirsconstance */
+@mixin loader-positioning {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin loader-animation-parameters {
+    animation-name: loader;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+

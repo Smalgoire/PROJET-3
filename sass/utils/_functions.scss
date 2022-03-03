@@ -31,4 +31,27 @@
     }
 }
 
-/* J'utilise les keyframes surtout pour profiter de la propriété animation fill mode pour l'instant */
+/* J'utilise les keyframes plutôt que les transitions surtout pour profiter de la propriété animation fill mode pour l'instant */
+
+@keyframes loader {
+    0% {
+        transform: rotate(1turn);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes hide-mainpage {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
