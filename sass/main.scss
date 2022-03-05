@@ -19,9 +19,9 @@ et utilise les couleurs principales du site */
     height: 350px;
     border: 15px solid $mediumgrey;
     @media all and (max-width: $tablet-minbreakpoint) {
-        width: 150px;
-        height: 150px;;
-        border: 10px solid $mediumgrey;
+        width: 180px;
+        height: 180px;
+        border: 6px solid $mediumgrey;
         border-top-color: $primary-color;
         border-bottom-color: $primary-color;
     }
@@ -31,34 +31,15 @@ et utilise les couleurs principales du site */
     @include loader-animation-parameters;  
 }
 
-.loader::before {
-    @include loader-positioning;
-    content: "";
-    width: 150px;
-    height: 150px;
-    @media all and (max-width: $tablet-minbreakpoint) {
-        width: 100px;
-        height: 100px;
-        border: 10px solid $mediumgrey;
-        border-top-color: $tertiary-color;
-        border-bottom-color: $tertiary-color;
-    }
-    border: 15px solid $mediumgrey;
-    border-top-color: $tertiary-color;
-    border-bottom-color: $tertiary-color;
-    border-radius: 50%;
-    @include loader-animation-parameters;
-}
-
 .loader::after {
     @include loader-positioning;
     content: "";
     width: 250px;
     height: 250px;
     @media all and (max-width: $tablet-minbreakpoint) {
-        width: 50px;
-        height: 50px;
-        border: 10px solid $mediumgrey;
+        width: 120px;
+        height: 120px;
+        border: 6px solid $mediumgrey;
         border-top-color: $secondary-color;
         border-bottom-color: $secondary-color;
     }
@@ -66,7 +47,26 @@ et utilise les couleurs principales du site */
     border-top-color: $secondary-color;
     border-bottom-color: $secondary-color;
     border-radius: 50%;
-    @include loader-animation-parameters;
+    @include loader-animation-parameters2;
+}
+
+.loader::before {
+    @include loader-positioning;
+    content: "";
+    width: 150px;
+    height: 150px;
+    @media all and (max-width: $tablet-minbreakpoint) {
+        width: 60px;
+        height: 60px;
+        border: 6px solid $mediumgrey;
+        border-top-color: $tertiary-color;
+        border-bottom-color: $tertiary-color;
+    }
+    border: 15px solid $mediumgrey;
+    border-top-color: $tertiary-color;
+    border-bottom-color: $tertiary-color;
+    border-radius: 50%;
+    @include loader-animation-parameters3;
 }
 
 .container-hide {
