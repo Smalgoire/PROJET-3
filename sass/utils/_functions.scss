@@ -35,7 +35,7 @@
 
 @keyframes loader {
     0% {
-        transform: rotate(1turn);
+        transform: rotate(-1turn);
         opacity: 1;
     }
     100% {

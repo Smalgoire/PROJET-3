@@ -89,3 +89,17 @@
     animation-fill-mode: forwards;
 }
 
+@mixin loader-animation-parameters2 {
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@mixin loader-animation-parameters3 {
+    animation-name: loader;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
